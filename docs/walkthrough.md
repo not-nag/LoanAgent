@@ -1,6 +1,6 @@
 # Five-minute recording script
 
-0:00-0:30 — Problem and scope. Fictional Meridian Bank; salaried unsecured personal loans. Scattered evidence slows review and employee onboarding. All data and checks are synthetic.
+0:00-0:30 — Problem and scope. Fictional Mangalore Bank; salaried unsecured personal loans. Scattered evidence slows review and employee onboarding. All data and checks are synthetic.
 
 0:30-1:30 — Aarav. Run checks. Explain EMI and obligation ratio are computed in code. Open a policy source. Officer approves with reason, sanctions, records simulated acceptance and disburses. Distinguish recommendation, sanction and actual funds release.
 

@@ -1,6 +1,6 @@
 # Employee Operating Guide
 Document: OPS-PL-001 | Version 1 | Effective: 14 November 2026
-Meridian Bank | Personal lending
+Mangalore Bank | Personal lending
 
 ## 7.1 Reviewing an application
 Open Applications and search by name, application ID, mobile or account ID. Select the application. Run eligibility checks, review the Assessment findings, inspect original evidence in Documents and read the Timeline before recording a decision.

@@ -44,3 +44,9 @@ Loaded 18 policy/employee-guide embeddings (Gemini embedding model, 768 dimensio
 Live bq:verify-rag passed: rate citation section 3.3/page 1, employee approval guide retrieval, exclusion of v1 policy under v2, applicant isolation, and agreement between BigQuery similarity scores/rankings and an independent local calculation. The rate query processed 132,033 bytes. All 44 automated tests and the production build passed. Browser inspection was blocked by the browser security policy during this follow-up; no new visual verification is claimed.
 
 The complete local assistant API request also passed: Gemini selected search_documents, which ran BigQuery VECTOR_SEARCH (job 2547f229-b609-4a30-8350-c01407a97719, 132,033 bytes processed), and returned the 12% illustrative rate with the original policy v1/page 1/section 3.3 citation. Activity output contained the actual SQL, vector-parameter summary, similarity scores and job provenance.
+
+## Final UI review — 15 November 2026
+
+Renamed the fictional bank to Mangalore Bank in the workspace, assistant instructions, employee guide and original policy PDF. Rendered and inspected the revised policy PDF, refreshed only document metadata/chunks in BigQuery, rebuilt 18 embeddings, and passed live RAG ranking/citation verification again. Customer, application, salary-credit and bureau tables were unchanged.
+
+Browser review covered the assistant, applications, policy, approach, architecture and FAQ pages at desktop and 390-pixel mobile widths. Checked application capture, document-register rows, evidence-map scrolling, policy controls and all dropdown arrow insets. Select controls reserve 34 pixels for the arrow and inset it 10 pixels from the right. No document-wide horizontal overflow was observed on mobile; tables, tabs, navigation and the evidence map scroll within their own containers. Fixed loading placeholders, page-navigation scroll position and the customer-statement receipt wording.

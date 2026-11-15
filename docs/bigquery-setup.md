@@ -51,3 +51,5 @@ This computer's CLI is installed at `/Users/notnag/.local/share/lendwise-cloud/g
 - Sandbox resources expire after 60 days. Refresh the dataset before evaluation if necessary. See [Google's sandbox limits](https://docs.cloud.google.com/bigquery/docs/sandbox) and [ADC authentication](https://docs.cloud.google.com/bigquery/docs/authentication/getting-started).
 
 The embedding generation uses the existing Gemini API key. BigQuery Connections, remote models and Vertex AI are not required by this implementation. Activity includes the vector-search SQL, job ID, bytes processed, matches and similarity scores. Query-vector values are summarised by dimension and SHA-256 rather than dumping 768 numbers into the UI.
+
+To refresh only bank-branded source documents, run `npm run bq:setup -- --documents-only --refresh` followed by `npm run bq:index`. This updates source_documents/document_chunks and their derived vectors; customer, application, salary, bureau and policy-configuration tables remain unchanged.
