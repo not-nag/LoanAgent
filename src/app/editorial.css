@@ -1,0 +1,95 @@
+/* Mangalore Bank: warm paper, burgundy navigation and editorial headings. */
+:root {
+ --background:#f7f4ee; --foreground:#312e2a;
+ --card:#fffefa; --card-foreground:#312e2a;
+ --popover:#fffefa; --popover-foreground:#312e2a;
+ --primary:#692d3d; --primary-foreground:#fffaf5;
+ --secondary:#eee8df; --secondary-foreground:#433931;
+ --muted:#eee9e1; --muted-foreground:#736b62;
+ --accent:#efe3e3; --accent-foreground:#692d3d;
+ --border:#ded7cd; --input:#d6cec3; --ring:#9e6775;
+ --sidebar:#512633; --sidebar-foreground:#f9ede7;
+ --sidebar-muted:#d4b7bb; --sidebar-accent:#6c3d49; --sidebar-border:#805360;
+ --font-editorial:Georgia,"Times New Roman",serif;
+}
+.sidebar{width:208px;padding:34px 18px 0;background:var(--sidebar);color:var(--sidebar-foreground);border-right:0}
+.main-shell{margin-left:208px}
+.brand{display:flex;flex-direction:column;align-items:flex-start;gap:16px;padding:0 12px;font-weight:400;letter-spacing:0}
+.brand-mark{display:block;width:auto;height:auto;background:transparent;color:var(--sidebar-foreground);border-radius:0}
+.bank-brand{font:28px/1.1 var(--font-editorial);letter-spacing:-.6px;max-width:145px}
+.bank-brand small{display:block;margin-top:14px;font:10px/1.5 "Geist Variable",sans-serif;letter-spacing:1.8px;color:var(--sidebar-muted)}
+.nav-caption{margin-top:41px;margin-bottom:12px;color:var(--sidebar-muted);font-size:9px;letter-spacing:1.4px;font-weight:400}
+.nav-item{font-size:12px;color:var(--sidebar-muted);gap:10px;padding:12px 10px;border-radius:4px;min-height:42px}
+.nav-item.active,.nav-item:hover{background:var(--sidebar-accent);color:var(--sidebar-foreground);box-shadow:none;font-weight:450}
+.nav-count{background:transparent;border:1px solid var(--sidebar-border);color:var(--sidebar-muted);font-size:10px;line-height:1.3}
+.solution-menu{margin-top:24px}.solution-menu summary{color:var(--sidebar-muted);font-size:11px}
+.sidebar .onboard-card{background:transparent;border:0;padding:18px 10px 0;margin-top:22px}
+.sidebar .onboard-card>svg,.sidebar .onboard-card h4{display:none}
+.sidebar .onboard-card button{margin-top:0;font-size:12px;font-weight:400;line-height:1.6;justify-content:space-between;width:100%;color:var(--sidebar-foreground)}
+.sidebar .user{border-color:var(--sidebar-border);margin-top:25px;padding:19px 10px 24px}
+.sidebar .user strong{font-size:11px;font-weight:400}.sidebar .user small{color:var(--sidebar-muted);font-size:10px}
+.sidebar .user .avatar{background:var(--sidebar-accent);border-color:var(--sidebar-border);color:var(--sidebar-foreground)}
+.topbar{height:72px;background:var(--background);padding:0 36px}
+.role-select{background-color:var(--background);border-radius:4px}
+main{padding-left:36px;padding-right:36px}
+h1{font-family:var(--font-editorial);font-weight:400;letter-spacing:-.9px}
+.page-heading h1{font-family:var(--font-editorial);font-size:34px;font-weight:400;letter-spacing:-1px}
+.agent-desk{max-width:700px;padding-top:54px;padding-bottom:35px;min-height:calc(100dvh - 150px)}
+.agent-intro{margin-bottom:28px}.agent-overline{letter-spacing:1.8px;font-size:10px;font-weight:400;margin-bottom:19px}
+.agent-intro h1{font-family:var(--font-editorial);font-weight:400;font-size:44px;line-height:1.13;letter-spacing:-1.5px}
+.agent-intro>p{font-size:13px;line-height:1.8;margin-top:18px}
+.agent-starters{display:grid;grid-template-columns:1fr;gap:0;margin:0 0 29px}
+.agent-starters button{border:0;border-bottom:1px solid var(--border);border-radius:0;padding:16px 0;background:transparent;color:var(--foreground);font-size:12px;min-height:53px;justify-content:flex-start;gap:12px}
+.agent-starters button:first-child{border-top:1px solid var(--border)}
+.agent-starters button>svg:first-child{color:var(--primary)}
+.agent-starters button>svg:last-child{margin-left:auto;color:var(--muted-foreground)}
+.agent-starters button:hover{background:transparent;color:var(--primary)}
+.agent-starters button:hover>span{text-decoration:underline;text-underline-offset:4px}
+.agent-composer{background:var(--card);border-radius:7px;box-shadow:none;padding:16px 15px 12px}
+.agent-composer textarea{font-size:14px;min-height:53px;padding:0;line-height:1.7}
+.agent-composer:focus-within{box-shadow:0 0 0 2px var(--accent);border-color:var(--ring)}
+.composer-tools{gap:10px}.composer-tools>span{font-size:11px}
+.composer-tools .agent-send-labeled{width:auto;height:34px;border-radius:4px;padding:0 12px;font-size:12px}
+.composer-tools button{border-radius:4px}
+.agent-composer.listening{border-color:var(--primary)}
+.agent-composer.listening [aria-pressed=true]{background:var(--accent);color:var(--primary)}
+.agent-grounding{display:flex;gap:6px;align-items:center;margin-top:13px;font-size:10px;line-height:1.7;color:var(--muted-foreground)}
+.agent-grounding>svg{flex-shrink:0}
+.agent-tour-launch{margin-top:18px;font-size:11px;color:var(--primary)}
+.agent-desk.has-answer{padding-top:30px}
+.panel,.table-section,.case-summary,.loan-result,.agent-list-result,.agent-policy-result,.trace-list,.guided-coach{background:var(--card)}
+.search-box,.filter-select,.text-field{background:var(--card)}
+input,textarea{accent-color:var(--primary)}
+.applicant-button .initials{background:var(--background)}
+.agent-check,.agent-document-list>div{border-color:var(--border)}
+.guided-progress>span{background:var(--primary)}
+.guided-session .tour-highlight{outline-color:var(--primary)!important}
+.app-footer{justify-content:flex-end;border-top:1px solid var(--border);padding:17px 0;margin-top:12px;font-size:10px}
+@media(min-width:1500px){.agent-desk{max-width:740px}}
+@media(max-width:900px) and (min-width:601px){
+ .sidebar{width:76px;padding:28px 10px 0}.main-shell{margin-left:76px}
+ .brand{align-items:center;padding:0;gap:0}.brand>.bank-brand{display:none}
+ .sidebar nav{margin-top:36px}.nav-caption{display:none}
+ .nav-item{font-size:0;justify-content:center;padding:13px 0}.solution-menu .nav-item{font-size:0}
+ .agent-desk{padding-top:46px}.agent-intro h1{font-size:39px}
+}
+@media(max-width:600px){
+ .sidebar{display:none}.main-shell{margin-left:0}main{padding-left:20px;padding-right:20px}
+ .topbar{height:62px;padding:0 20px;background:var(--sidebar);color:var(--sidebar-foreground);border-bottom:0}
+ .mobile-bank-name{color:var(--sidebar-foreground);font-family:var(--font-editorial);font-size:17px;font-weight:400}
+ .role-select{background-color:var(--sidebar);color:var(--sidebar-foreground);border-color:var(--sidebar-border);min-width:126px}
+ .role-select option{background:var(--card);color:var(--foreground)}
+ .topbar>div:last-child>button{color:var(--sidebar-foreground)}
+ .topbar>div:last-child>button:hover{background:var(--sidebar-accent)}
+ .mobile-nav{padding:14px 0;border-bottom:1px solid var(--border)}
+ .mobile-nav button.active{background:var(--primary);color:var(--primary-foreground)}
+ .agent-desk{padding-top:35px;min-height:calc(100dvh - 175px);padding-bottom:25px}
+ .agent-intro h1{font-size:36px;line-height:1.16;letter-spacing:-1.2px}
+ .agent-overline{font-size:9px;letter-spacing:1.4px}.agent-intro>p{font-size:13px;margin-top:17px}
+ .agent-intro{margin-bottom:25px}.agent-starters{margin-bottom:25px;gap:0}
+ .agent-starters button{padding:15px 0;font-size:12px}
+ .agent-composer textarea{font-size:16px;min-height:64px}
+ .composer-tools{align-items:flex-end;flex-wrap:wrap}.composer-tools>span{flex:1 1 100%;font-size:10px}
+ .composer-tools>div{margin-left:auto}.agent-grounding{font-size:10px;align-items:flex-start}
+ .agent-desk.has-answer{padding-top:22px}.page-heading h1{font-size:30px}
+}
