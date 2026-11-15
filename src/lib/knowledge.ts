@@ -1,5 +1,5 @@
 import { Policy, money } from './domain';
-export type Clause={id:string;title:string;text:string;source:string};
+export type Clause={id:string;title:string;text:string;source:string;url?:string;documentId?:string;documentVersion?:string;page?:number;section?:string;checksum?:string};
 export function clauses(p:Policy):Clause[]{const v=p.values;return [
 {id:'2.1',title:'Age eligibility',text:`Salaried applicants must be at least ${v.minAge} years old at application and no older than ${v.maxAge} at final repayment.`,source:'Demo Personal Loan Policy'},
 {id:'2.2',title:'Income eligibility',text:`Minimum verified net monthly salary is ${money(v.minIncome)}. Declared income alone is not sufficient evidence.`,source:'Demo Personal Loan Policy'},

@@ -2,21 +2,21 @@
 
 ## Server-side assistant
 
-Replace local retrieval/tool routing with a server-side endpoint. Supply only authorised case evidence and approved policy clauses. Tools: get_application_evidence(application_id), search_policy(query, product, as_of), calculate_affordability(application_id, policy_version), navigate_allowed_screen(screen), start_tour(tour_id), run_mock_checks(application_id). Validate tool input and scope on the server. Never expose API keys in a static export.
+The local server-side Gemini API integration is implemented. The model chooses application lookup, record retrieval, semantic document search using Gemini query embeddings and BigQuery VECTOR_SEARCH over stored document embeddings, deterministic eligibility checks and scoped navigation. Source excerpts and real tool events are returned to the UI. The API key remains server-side. The OpenAI attempt was blocked by lack of credits. Gemini generation, embeddings and a cited policy answer have now been verified with the user’s free-tier key.
 
-Keep approval, decline, policy activation and disbursement outside model-callable actions. Server checks role, application state and current evidence before each mutation. The LLM drafts explanations; calculators and rule evaluators return numeric results. Treat uploaded text as untrusted evidence, not tool instructions.
+Workflow snapshots are currently supplied by the browser. Before public deployment, move them to an authenticated operational database and enforce real server roles, row access, persistent audit logs, usage budgets and per-user rate limits. Approval, decline, policy activation and disbursement remain outside model-callable actions.
 
-Evaluation set: rate query, processing-target versus status, insufficient policy evidence, stale rule, ambiguous percentage, applicant context isolation, missing document, income conflict, forbidden approval action and unavailable mock API. Expected answers must include correct citations and abstain when unsupported.
+Evaluation set: rate query, processing target versus status, insufficient policy evidence, stale rule, ambiguous percentage, applicant context isolation, missing document, income conflict, forbidden approval action and unavailable API. Verify correct citations and abstention live.
 
 ## BigQuery evidence layer
 
-Use the export script to generate 240 applicant/application records, 6 months of salary-credit transactions per applicant, mock bureau records and policy snapshots. Load into a dedicated demo dataset. Store synthetic document originals in Cloud Storage and document metadata with URI/page fields in BigQuery. Add validated views joined by application_id/customer_id; preserve received_at, valid_from/to, source_id and extraction confidence.
+The BigQuery setup script now batch-loads 240 customers/applications, six months of salary-credit transactions per applicant, mock bureau responses, policy snapshots and extracted document metadata/chunks into a dedicated dataset. Joined evidence views feed server tools when DATA_BACKEND=bigquery. See bigquery-setup.md for authentication, live verification and current limits. Store synthetic document originals in Cloud Storage and document metadata with URI/page fields in BigQuery. Add validated views joined by application_id/customer_id; preserve received_at, valid_from/to, source_id and extraction confidence.
 
 Operational states and writes should live in an authenticated operational store; asynchronously copy audit/assessment records to BigQuery. Do not use BigQuery as a high-frequency transactional application database.
 
 ## Policy retrieval
 
-Separate authoritative source documents from editable bank-approved rule configuration. Keep policy_id, version, clause_id, product, effective_from/to, review_status and supersedes_clause_id. A reviewer must validate alignment between prose and executable rules. Retrieve approved, applicable clauses only. A genuine document-driven pipeline must preserve originals and extracted text; generating prose from rules is merely this prototype's simplification.
+Separate authoritative source documents from editable bank-approved rule configuration. Keep policy_id, version, clause_id, product, effective_from/to, review_status and supersedes_clause_id. A reviewer must validate alignment between prose and executable rules. Retrieve approved, applicable clauses only. The implementation now preserves original fixed source files, extracted page/section text and file checksums. Retrieval uses the policy PDF rather than prose regenerated from rules. Arbitrary uploads, OCR and automatic policy/rule reconciliation remain future work. The evidence map visualises explicit metadata and assessment relationships; no graph retrieval or automatic relation extraction is claimed.
 
 ## Access needed
 

@@ -8,11 +8,11 @@
 
 2:15-2:55 — Rohan. Show income mismatch, bureau review band and high obligations. Explain evidence, not a fraud accusation.
 
-2:55-3:35 — Q&A and employee onboarding. Ask about interest rate and processing time, open citations. Select Employee guide and start a tour. Show a navigation action. Explain local retrieval and scripted tools honestly; live model integration is still pending.
+2:55-3:35 — Q&A and employee onboarding. Ask about interest rate and processing time, open citations. Select Employee guide and start a tour. Show a navigation action. Show the actual tool activity and retrieved policy excerpts. Explain that the local server calls Gemini for tool selection and embeddings, calls BigQuery VECTOR_SEARCH over stored document embeddings, then synthesises the answer. Show actual sources and distinguish configured policy snapshots from independent bank PDFs.
 
 3:35-4:15 — Configurable policy. Policy admin edits draft; reviewer activates. Explain policy snapshots and stale-assessment blocking. Roles are simulated, not actual access control.
 
-4:15-5:00 — Approach and architecture. Two acts: connect evidence, then use an assistant with tools and human control. Clearly identify proposed BigQuery/Cloud Storage integration and current browser-local prototype. Measure pilot outcomes against a baseline; no claimed percentage improvements.
+4:15-5:00 — Approach and architecture. Two acts: connect evidence, then use an assistant with tools and human control. Show actual BigQuery table counts on Architecture and SQL/job provenance in Activity. Explain that original files remain local while embeddings and search live in BigQuery, Cloud Storage is unconnected and operational workflow writes remain browser-local. Measure pilot outcomes against a baseline; no claimed percentage improvements.
 
 # Twenty-minute live walkthrough
 

@@ -1,0 +1,10 @@
+[
+ {"id":"personal-loan-policy-v1","title":"Personal Loan Policy","filename":"sample-personal-loan-policy.pdf","version":"1","kind":"policy","policyVersion":1,"effective":"2026-11-14"},
+ {"id":"employee-guide-v1","title":"Employee Operating Guide","filename":"evidence/employee-operating-guide.md","version":"1","kind":"guide","effective":"2026-11-14"},
+ {"id":"PL-1001-salary","title":"Salary slips — Aarav Mehta","filename":"evidence/PL-1001-salary.md","version":"1","kind":"applicant","applicationId":"PL-1001","evidenceType":"salary","effective":"2026-10-31"},
+ {"id":"PL-1001-statement","title":"Salary-credit statement — Aarav Mehta","filename":"evidence/PL-1001-statement.md","version":"1","kind":"applicant","applicationId":"PL-1001","evidenceType":"statement","effective":"2026-10-31"},
+ {"id":"PL-1002-salary","title":"Salary slips — Priya Sharma","filename":"evidence/PL-1002-salary.md","version":"1","kind":"applicant","applicationId":"PL-1002","evidenceType":"salary","effective":"2026-10-31"},
+ {"id":"PL-1002-statement","title":"Salary-credit statement — Priya Sharma","filename":"evidence/PL-1002-statement.md","version":"1","kind":"applicant","applicationId":"PL-1002","evidenceType":"statement","requiresResolved":true,"effective":"2026-10-31"},
+ {"id":"PL-1003-salary","title":"Salary slips — Rohan Iyer","filename":"evidence/PL-1003-salary.md","version":"1","kind":"applicant","applicationId":"PL-1003","evidenceType":"salary","effective":"2026-10-31"},
+ {"id":"PL-1003-statement","title":"Salary-credit statement — Rohan Iyer","filename":"evidence/PL-1003-statement.md","version":"1","kind":"applicant","applicationId":"PL-1003","evidenceType":"statement","effective":"2026-10-31"}
+]

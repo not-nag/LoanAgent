@@ -6,3 +6,5 @@ out/
 !.env.example
 *.tar.gz
 tmp/
+
+.data/
