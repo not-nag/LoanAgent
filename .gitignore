@@ -8,3 +8,8 @@ out/
 tmp/
 
 .data/
+
+__pycache__/
+
+# Generated submission copies; served PDFs are tracked under public/documents.
+output/

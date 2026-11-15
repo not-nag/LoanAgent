@@ -18,9 +18,9 @@ DATA_BACKEND=local
 4. Run `npm run bq:prepare` to extract originals and inspect load files under `.data/bigquery/` without changing cloud resources.
 5. Run `npm run bq:setup`. This creates the dedicated dataset, seven batch-loaded tables and three views. Existing tables are not overwritten. `npm run bq:setup -- --refresh` explicitly replaces these sample tables; it must only be used for the dedicated assignment dataset.
 6. Run `npm run bq:index` to batch-load a derived `document_embeddings` table. Then run `npm run bq:verify`. It checks actual cloud row counts, income consistency, unknown identifiers, policy version filtering and missing-statement visibility.
-7. Set `DATA_BACKEND=bigquery`, run `npm run bq:verify-rag`, and restart Next.js. The workspace footer reports whether evidence is connected. Architecture lists actual table counts.
+7. Set `DATA_BACKEND=bigquery`, run `npm run bq:verify-rag`, and restart Next.js. Architecture reports the evidence connection and actual table counts.
 
-This computer's CLI is installed at `/Users/notnag/.local/share/lendwise-cloud/google-cloud-sdk/bin/gcloud`. ADC credentials remain outside the repository. Do not commit or paste credential files. To use the repo elsewhere, install the official Google Cloud CLI and repeat ADC sign-in.
+Install the Google Cloud CLI and complete ADC sign-in on the computer running the app. Credentials remain outside the repository and must not be committed.
 
 ## Tables and views
 
